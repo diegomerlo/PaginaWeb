@@ -36,10 +36,11 @@ public class userprofile extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jSeparator4 = new javax.swing.JSeparator();
-        jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
         jTextField3 = new javax.swing.JTextField();
         jTextField4 = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        jPasswordField1 = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(200, 200));
@@ -49,14 +50,14 @@ public class userprofile extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(51, 51, 51));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon("E:\\5TO 2DA\\LPOO\\08-09-2023 Página Web HTML\\imágenes\\chicochico.png")); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon("E:\\5TO 2DA\\LPOO\\08-09-2023 Página Web HTML\\setprofile\\src\\main\\java\\com\\mycompany\\setprofile\\chicochico.png")); // NOI18N
         jLabel3.setAutoscrolls(true);
 
         jLabel4.setFont(new java.awt.Font("Harlow Solid Italic", 1, 24)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Tu Perfil");
 
-        jLabel5.setIcon(new javax.swing.ImageIcon("E:\\5TO 2DA\\LPOO\\08-09-2023 Página Web HTML\\imágenes\\676bf0e9f3c16649cd7f426c6dcd755a-signo-de-usuario-plano-con-fondo-redondo.png")); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon("E:\\5TO 2DA\\LPOO\\08-09-2023 Página Web HTML\\setprofile\\src\\main\\java\\com\\mycompany\\setprofile\\676bf0e9f3c16649cd7f426c6dcd755a-signo-de-usuario-plano-con-fondo-redondo.png")); // NOI18N
         jLabel5.setAutoscrolls(true);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -87,7 +88,7 @@ public class userprofile extends javax.swing.JFrame {
         );
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 450));
-        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 270, 290, 30));
+        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 270, 290, 20));
         jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 120, 290, 30));
         jPanel1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 170, 290, 30));
 
@@ -146,9 +147,6 @@ public class userprofile extends javax.swing.JFrame {
         jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 230, -1, -1));
         jPanel1.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 220, 290, 30));
 
-        jTextField1.setBorder(null);
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 250, 290, 20));
-
         jTextField2.setBorder(null);
         jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 100, 290, 20));
 
@@ -157,6 +155,18 @@ public class userprofile extends javax.swing.JFrame {
 
         jTextField4.setBorder(null);
         jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 200, 290, 20));
+
+        jLabel10.setFont(new java.awt.Font("Lucida Sans", 1, 14)); // NOI18N
+        jLabel10.setText("Registrate:");
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 30, -1, -1));
+
+        jPasswordField1.setText("jPasswordField1");
+        jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jPasswordField1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 250, 290, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -171,6 +181,10 @@ public class userprofile extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPasswordField1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -204,11 +218,13 @@ public class userprofile extends javax.swing.JFrame {
             public void run() {
                 new userprofile().setVisible(true);
             }
+            
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -221,11 +237,11 @@ public class userprofile extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;

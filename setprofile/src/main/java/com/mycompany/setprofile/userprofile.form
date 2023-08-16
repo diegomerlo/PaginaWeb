@@ -97,7 +97,7 @@
             <Component class="javax.swing.JLabel" name="jLabel3">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="E:\5TO 2DA\LPOO\08-09-2023 P&#xe1;gina Web HTML\im&#xe1;genes\chicochico.png"/>
+                  <Image iconType="2" name="E:\5TO 2DA\LPOO\08-09-2023 P&#xe1;gina Web HTML\setprofile\src\main\java\com\mycompany\setprofile\chicochico.png"/>
                 </Property>
                 <Property name="autoscrolls" type="boolean" value="true"/>
               </Properties>
@@ -116,7 +116,7 @@
             <Component class="javax.swing.JLabel" name="jLabel5">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="E:\5TO 2DA\LPOO\08-09-2023 P&#xe1;gina Web HTML\im&#xe1;genes\676bf0e9f3c16649cd7f426c6dcd755a-signo-de-usuario-plano-con-fondo-redondo.png"/>
+                  <Image iconType="2" name="E:\5TO 2DA\LPOO\08-09-2023 P&#xe1;gina Web HTML\setprofile\src\main\java\com\mycompany\setprofile\676bf0e9f3c16649cd7f426c6dcd755a-signo-de-usuario-plano-con-fondo-redondo.png"/>
                 </Property>
                 <Property name="autoscrolls" type="boolean" value="true"/>
               </Properties>
@@ -126,7 +126,7 @@
         <Component class="javax.swing.JSeparator" name="jSeparator1">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="310" y="270" width="290" height="30"/>
+              <AbsoluteConstraints x="310" y="270" width="290" height="20"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -271,18 +271,6 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField1">
-          <Properties>
-            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-              <Border info="null"/>
-            </Property>
-          </Properties>
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="310" y="250" width="290" height="20"/>
-            </Constraint>
-          </Constraints>
-        </Component>
         <Component class="javax.swing.JTextField" name="jTextField2">
           <Properties>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -316,6 +304,32 @@
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="310" y="200" width="290" height="20"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel10">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Lucida Sans" size="14" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Registrate:"/>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="420" y="30" width="-1" height="-1"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="javax.swing.JPasswordField" name="jPasswordField1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="jPasswordField1"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jPasswordField1ActionPerformed"/>
+          </Events>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="310" y="250" width="290" height="-1"/>
             </Constraint>
           </Constraints>
         </Component>
