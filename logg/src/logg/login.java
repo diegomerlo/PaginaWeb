@@ -15,7 +15,7 @@ import javax.swing.JPasswordField;
 import java.awt.Image;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
-
+import javax.swing.JOptionPane;
 public class login {
 	private static JTextField textField;
 	private static JPasswordField passwordField;
@@ -34,10 +34,14 @@ public class login {
 		frame.getContentPane().add(panel);
 		panel.setLayout(null);
 		
-		JLabel lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setIcon(new ImageIcon("E:\\5TO 2DA\\LPOO\\08-09-2023 Página Web HTML\\JAVA Diego Pagina\\src\\LogoChico.png"));
+		ImageIcon logo = new ImageIcon("E:\\5TO 2DA\\LPOO\\08-09-2023 Página Web HTML\\logg\\src\\logg\\Logo1.png");
+        Image logo1 = logo.getImage();
+        Image scaledlogo = logo1.getScaledInstance(100, 30, Image.SCALE_SMOOTH);
+        ImageIcon scaledlogoImage = new ImageIcon(scaledlogo);
 		
-		lblNewLabel_1.setBounds(56, 11, 86, 30);
+		JLabel lblNewLabel_1 = new JLabel("");
+		lblNewLabel_1.setIcon(scaledlogoImage);
+		lblNewLabel_1.setBounds(50, 11, 100, 30);
 		panel.add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("Log");
@@ -87,8 +91,33 @@ public class login {
         JButton btnNewButton_1 = new JButton("Ingresar");
         btnNewButton_1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+                String gmail = textField.getText();
+                char[] contrasena = passwordField.getPassword();
+                String contrasenaStr = new String(contrasena);
+                
+                if (gmail.isEmpty() || contrasenaStr.isEmpty()) {
+                    JOptionPane.showMessageDialog(null, "Por favor complete todos los campos.");
+                } else {
+                    InsertarUsuarios insertarUsuarios = new InsertarUsuarios(); // Crear una instancia de la clase
+                    boolean credencialesValidas = insertarUsuarios.verificarCredenciales(gmail, contrasenaStr);
+
+                    if (credencialesValidas) {
+                        String nombreApellido = insertarUsuarios.obtenerNombreApellido(gmail); 
+                        if (nombreApellido != null) {
+                            JOptionPane.showMessageDialog(null, "Bienvenido " + nombreApellido);
+                        } else {
+                            JOptionPane.showMessageDialog(null, "Credenciales válidas. Registro exitoso.");
+                        }
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Credenciales inválidas o correo no encontrado. Por favor verifique el correo y la contraseña.");
+                    }
+                }
             }
         });
+
+        
+        
+        
         btnNewButton_1.setBounds(50, 263, 100, 25);
         panel.add(btnNewButton_1);
 
@@ -162,7 +191,7 @@ public class login {
 		panel_1.setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("E:\\5TO 2DA\\LPOO\\08-09-2023 Página Web HTML\\html DIEGO pagina\\imágenes\\AutosFondo.jpeg"));
+		lblNewLabel.setIcon(new ImageIcon("E:\\5TO 2DA\\LPOO\\08-09-2023 Página Web HTML\\logg\\src\\logg\\AutosFondo.jpeg"));
 		lblNewLabel.setBounds(-177, 0, 560, 361);
 		panel_1.add(lblNewLabel);
 		
@@ -180,3 +209,4 @@ public class login {
 		
 	}
 }
+

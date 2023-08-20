@@ -177,7 +177,7 @@ class LoginFrame extends JFrame {
         getContentPane().add(panel_1);
         panel_1.setLayout(null);
         JLabel backgroundLabel = new JLabel("");
-        backgroundLabel.setIcon(new ImageIcon("E:\\\\5TO 2DA\\\\LPOO\\\\08-09-2023 Página Web HTML\\\\html DIEGO pagina\\\\imágenes\\\\AutosFondo.jpeg"));
+        backgroundLabel.setIcon(new ImageIcon("E:\\\\5TO 2DA\\\\LPOO\\\\08-09-2023 Página Web HTML\\\\logg\\\\src\\\\logg\\\\AutosFondo.jpeg"));
         backgroundLabel.setBounds(30, 0, 560, 361);
         panel_1.add(backgroundLabel);
 
