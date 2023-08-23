@@ -7,9 +7,8 @@ public class Pagina2 {
 	
 private JFrame frame2;
 		public Pagina2() {
+			Color Gris = new Color(112, 128, 144);
 			
-			
-
 			frame2 = new JFrame();
 			frame2.setTitle("Home Page");
 			frame2.setBounds(600, 250, 529, 381);
@@ -22,34 +21,56 @@ private JFrame frame2;
 			frame2.getContentPane().add(Panel_Buscador);
 			Panel_Buscador.setLayout(null);
 			
-			JButton Boton_Nosotros = new JButton("Nosotros\r\n");
-			Boton_Nosotros.setFont(new Font("Tahoma", Font.PLAIN, 10));
-			Boton_Nosotros.setBounds(424, 11, 79, 23);
-			Panel_Buscador.add(Boton_Nosotros);
-			
-			JButton Boton_Ubicacion = new JButton("Ubicación");
-			Boton_Ubicacion.setFont(new Font("Tahoma", Font.PLAIN, 10));
-			Boton_Ubicacion.setBounds(325, 11, 89, 23);
-			Panel_Buscador.add(Boton_Ubicacion);
-			
+		
+			JButton Boton_Usuario = new JButton("");
+			Boton_Usuario.setBounds(473, 11, 30, 30);
+            Boton_Usuario.setBorderPainted(false);
+            Boton_Usuario.setContentAreaFilled(false);
+            Boton_Usuario.setFocusPainted(false);
+			ImageIcon img5 = new ImageIcon(this.getClass().getResource("/Usuario .png"));
+			Boton_Usuario.setIcon(img5);
+			Panel_Buscador.add(Boton_Usuario);
+		
 			JButton Boton_Modelos = new JButton("Modelos");
-			Boton_Modelos.setFont(new Font("Tahoma", Font.PLAIN, 10));
-			Boton_Modelos.setBounds(226, 11, 89, 23);
+			Boton_Modelos.setFont(new Font("Tahoma", Font.PLAIN, 15));  //aca
+			Boton_Modelos.setBounds(379,12, 89, 23);  //aca
+			Boton_Modelos.setBorderPainted(false); // aca
+			Boton_Modelos.setContentAreaFilled(false); //aca
+			Boton_Modelos.setFocusPainted(false); //aca
 			Panel_Buscador.add(Boton_Modelos);
 			
 			JButton Boton_MenuBarras = new JButton("");
 		    Boton_MenuBarras.setBounds(10, 11, 30, 30);
 			Boton_MenuBarras.setOpaque(true);
+			Boton_MenuBarras.setBorderPainted(false); //aca
+			Boton_MenuBarras.setContentAreaFilled(false); //aca
+			Boton_MenuBarras.setFocusPainted(false); //aca
 			ImageIcon img = new ImageIcon(this.getClass().getResource("/Menu1.png"));
 			Boton_MenuBarras.setIcon(img);
 			Panel_Buscador.add(Boton_MenuBarras);
 			
-			JLabel Label_LogoMini = new JLabel("New label");
-			Label_LogoMini.setBounds(50, 11, 86, 26);
-			Label_LogoMini.setOpaque(true);
-			ImageIcon img3 = new ImageIcon(this.getClass().getResource("/LogoChico.png"));
-			Label_LogoMini.setIcon(img3);
-			Panel_Buscador.add(Label_LogoMini);
+			 JPopupMenu menuDesplegable = new JPopupMenu();
+			 
+		        JMenuItem menuItem1 = new JMenuItem("Opción 1");
+		        JMenuItem menuItem2 = new JMenuItem("Opción 2");
+		        JMenuItem menuItem3 = new JMenuItem("Opción 3");
+		        menuDesplegable.setBackground(Gris); //aca
+		        menuItem1.setBackground(Gris); //aca
+		        menuItem1.setForeground(Color.WHITE); //aca
+		        menuItem2.setBackground(Gris); //aca
+		        menuItem2.setForeground(Color.WHITE); //aca
+		        menuItem3.setBackground(Gris);   //aca
+		        menuItem3.setForeground(Color.WHITE); //aca
+		        menuDesplegable.add(menuItem1);
+		        menuDesplegable.add(menuItem2);
+		        menuDesplegable.add(menuItem3);
+		        
+		        Boton_MenuBarras.addActionListener(new ActionListener() {
+		            @Override
+		            public void actionPerformed(ActionEvent e) {
+		                menuDesplegable.show(Boton_MenuBarras, 0, Boton_MenuBarras.getHeight());
+		            }
+		        });
 			
 			JPanel Panel_Fondo = new JPanel();
 			Panel_Fondo.setBackground(new Color(0, 0, 0));
@@ -59,20 +80,26 @@ private JFrame frame2;
 			
 			JLabel Label_Fondo = new JLabel();
 			Label_Fondo.setHorizontalAlignment(SwingConstants.CENTER);
-			Label_Fondo.setBounds(0, 0, 513, 293);
+			Label_Fondo.setBounds(0, 0, 513, 300);
 			Label_Fondo.setOpaque(true);
 			ImageIcon img4 = new ImageIcon(this.getClass().getResource("/Fondo2.png"));
 			Label_Fondo.setIcon(img4);
 			Panel_Fondo.add(Label_Fondo);
 			
 			
-	
-			JButton Boton_Explorar = new JButton("Expl orar");
+			JLabel Label_LogoMax = new JLabel("New label");
+			Label_LogoMax.setBounds(136, 40, 240, 72);
+			Label_LogoMax.setOpaque(true);
+			ImageIcon img2 = new ImageIcon(this.getClass().getResource("/LogoGrande.png"));
+			Label_LogoMax.setIcon(img2);
+			Label_Fondo.add(Label_LogoMax);
+			
+			JTextField Boton_Explorar = new JTextField("Encontra el auto que queres");
 			Boton_Explorar.setBackground(new Color(255, 255, 255));
 			Boton_Explorar.setForeground(new Color(0, 0, 0));
 			Label_Fondo.add(Boton_Explorar);
 			Boton_Explorar .setFont(new Font("Tahoma", Font.PLAIN, 10));
-			Boton_Explorar .setBounds(210, 120, 89, 23);
+			Boton_Explorar .setBounds(188, 120, 132, 23); 
 		
 				JLabel lblNewLabel = new JLabel("Merlo Molina Rolon Salgueiro");
 				lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
@@ -81,13 +108,6 @@ private JFrame frame2;
 				lblNewLabel.setForeground(new Color(240, 248, 255));
 				Label_Fondo.add(lblNewLabel);
 				
-					JLabel lblNewLabel_4 = new JLabel("Encontra el auto que queres");
-					Label_Fondo.add(lblNewLabel_4);
-					lblNewLabel_4.setBackground(new Color(255, 255, 255));
-					lblNewLabel_4.setHorizontalAlignment(SwingConstants.CENTER);
-					lblNewLabel_4.setForeground(new Color(240, 248, 255));
-					lblNewLabel_4.setFont(new Font("Tahoma", Font.PLAIN, 15));
-					lblNewLabel_4.setBounds(155, 60, 200, 19);
 	
 	        
 	        frame2.setVisible(true);
